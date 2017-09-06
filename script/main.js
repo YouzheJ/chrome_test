@@ -10,19 +10,18 @@ function FillData() {
 
   }
   this.getZWDData = function() {
-    
+
   }
 }
 
 chrome.runtime.onMessage.addListener(
   function(request, sender, sendResponse) {
-    // console.log(request, sender, sendResponse)
+    console.log(request, sender, sendResponse)
     console.log(sender.tab ?
                 "from a content script:" + sender.tab.url :
                 "from the extension, fill: " + request.fill);
     if (request.fill === true) {
-
-      sendResponse({status: 1, msg: "fill success"});
+      sendResponse({status: 1, msg: "fill success", data: ZWDDATA});
     }else {
       sendResponse({status: 0, msg: "not fill"}); // snub them.
     }
