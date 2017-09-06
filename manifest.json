@@ -4,7 +4,6 @@
   "name": "Getting started example",
   "description": "This extension shows a Google Image search result for the current page",
   "version": "1.0",
-
   "browser_action": {
     "default_icon": "icon.png",
     "default_popup": "popup.html"
@@ -15,7 +14,7 @@
   "content_scripts": [
     {
       "matches": ["http://*/*"],
-      "js": ["script/jquery-3.2.1.slim.min.js", "script/main.js"],
+      "js": ["script/jquery-3.2.1.slim.min.js"],
       "run_at": "document_end"
     }
   ]

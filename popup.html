@@ -1,17 +1,116 @@
-<!doctype>
 <html>
-  <head>
+  <head lang="en">
+    <meta charset="UTF-8">
     <title>17 chrome extension</title>
     <style>
+      * {margin:0;padding:0;}
       body {
-        min-width: 350px;
-        min-height: 150px;
+          font-size: 12px;
+          background-color: #f5f5f5;
+      }
+      .warp {
+          width: 350px;
+      }
+      .title img {
+        vertical-align: text-top;
+      }
+      h3 {
+          padding: 15px;margin:1px;background:#ececec;text-align: center;font-size:16px;color:#333;
+      }
+      .desc {
+          margin: 5px;
+          background-color: #fff;
+          padding: 10px;
+          line-height: 20px;
+          color:#666;
+      }
+      .copy {
+          margin:10px 5px;
+          text-align: right;
+      }
+      .copy a, .button-group .btn {
+          color:#333;
+          text-decoration: none;
+      }
+      .copy a:hover, .button-group .btn:hover {
+          color:#EF3664;
+      }
+      ul.list {
+          list-style: none;
+      }
+      ul.list li {
+          list-style: none;
+      }
+      .version {
+          float:left;
+      }
+      .button-group {
+        margin-top: 20px;
+        text-align: center;
+      }
+      .button-group .btn {
+        display: inline-block;
+        height: 30px;
+        width: 80px;
+        line-height: 30px;
+        text-align: center;
+        color: #FE4300;
+        background: #fff;
+        border: 1px solid #FE4300;
+        transition: all 0.2s ease;
+        border-radius: 3px;
+        cursor: pointer;
+      }
+      .button-group .btn + .btn {
+        margin-left: 30px;
+      }
+      .button-group .btn:hover {
+        color: #fff;
+        background: #FE4300;
+      }
+      
+      .product {
+        padding-bottom: 20px;
+      }
+      .product .url-input {
+        width: 160px;
+        padding: 5px;
+        outline: none;
+        border: 1px solid #fff;
+        border-bottom-color: #7f7f7f;
+      }
+      .product .url-input:focus {
+        /* border: 1px solid #FE4300; */
+        border-bottom-color: #FE4300;
       }
     </style>
   </head>
   <body>
-    <h3>HELLO WROLD!!</h3>
-    <h3>HELLO JANE!!</h3>
+    <div class="warp">
+        <h3 class="title">
+          <img src="logo.ico" height="25" alt="">
+          <span>17网一键发布助手(拼多多版)</span>
+        </h3>
+        <div class="desc">
+            <p>将17网的商品一键发布到拼多多</p>
+            <!-- <ul class="list">
+                <li></li>
+            </ul> -->
+            <div class="button-group">
+              <div class="product">
+                商品: <input type="text" class="url-input" id="productUrl" placeholder="输入17网商品的地址">
+              </div>
+              <a class="btn" id="onekey">一键填充</a>
+              <a class="btn" href="#" target="_blank">设置模板</a>
+            </div>
+        </div>
+        <div class="copy">
+            <div class="version">
+                @17网-stu 1.0.0
+            </div>
+            <a href="#" target="_blank">查看使用说明</a>
+        </div>
+      </div>
     <script src="script/popup.js"></script>
   </body>
 </html>
